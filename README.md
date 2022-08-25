@@ -31,7 +31,7 @@ Add the following to your .env, you can get these values from your ovalfi dashbo
 ```bash
 OVALFI_MODE=
 OVALFI_PUBLIC_KEY=
-OVALFI_BEARER_TOKEN
+OVALFI_BEARER_TOKEN=
 ```
 
 ## Usage:
