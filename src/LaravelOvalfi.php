@@ -53,8 +53,8 @@ class LaravelOvalfi
         $headers = [
             'Authorization' => "Bearer {$this->bearer_token}",
         ];
-        if ($method == 'POST' && in_array('reference', $data)) {
-            $key = $this->public_key.$data['reference'];
+        if ($method == 'POST' && isset($data['reference'])) {
+            $key = "{$this->public_key}{$data['reference']}";
             $signature = hash('sha256', $key);
             $headers['Signature'] = $signature;
         }
